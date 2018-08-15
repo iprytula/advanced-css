@@ -16,20 +16,49 @@ body {
   max-width: 71.25rem;
   margin: 0 auto; }
 
-.row {
-  background-color: #eee; }
-  .row:not(:last-child) {
-    margin-bottom: 4rem; }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row .col-1-of-2 {
-    width: calc((100% - 3rem) / 2);
-    background-color: orangered;
-    float: left; }
-    .row .col-1-of-2:not(:last-child) {
-      margin-right: 3rem; }
+.row:not(:last-child) {
+  margin-bottom: 4rem; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.row .col-1-of-2 {
+  width: calc((100% - 3rem) / 2);
+  float: left; }
+  .row .col-1-of-2:not(:last-child) {
+    margin-right: 3rem; }
+
+.row .col-1-of-4 {
+  width: calc((100% - 3rem * 3) / 4);
+  float: left; }
+  .row .col-1-of-4:not(:last-child) {
+    margin-right: 3rem; }
+
+.row .col-2-of-4 {
+  width: calc((100% - 3rem) / 2);
+  float: left; }
+  .row .col-2-of-4:not(:last-child) {
+    margin-right: 3rem; }
+
+.row .col-3-of-4 {
+  width: calc( (((100% - 3rem * 3) / 4) * 3) + 3rem * 2);
+  float: left; }
+  .row .col-3-of-4:not(:last-child) {
+    margin-right: 3rem; }
+
+.row .col-1-of-3 {
+  width: calc((100% - 3rem * 2) / 3);
+  float: left; }
+  .row .col-1-of-3:not(:last-child) {
+    margin-right: 3rem; }
+
+.row .col-2-of-3 {
+  width: calc((100% - (100% - 3rem * 2) / 3) - 3rem);
+  float: left; }
+  .row .col-2-of-3:not(:last-child) {
+    margin-right: 3rem; }
 
 @keyframes moveInLeft {
   0% {
