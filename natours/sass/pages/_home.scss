@@ -43,32 +43,9 @@
       margin-left: -16px;
     }
   }
-
-  .header__discover-btn {
-    display: block;
-    width: 230px;
-    margin: 0 auto;
-    margin-top: 2rem;
-    padding: 0.8rem;
-    text-decoration: none;
-    border-radius: 1.6rem;
-    text-transform: uppercase;
-    text-align: center;
-    animation: moveInBottom;
-    animation-duration: 1s;
-    transition: all 0.2s;
-    position: relative;
-    color: $color-grey-dark;
-    background-color: #fff;
-
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    &:active {
-      transform: translateY(-1px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
-  }
+}
+.section-about {
+  background-color: $color-grey-light;
+  padding: 10rem 0;
+  margin-top: -20vh;
 }
