@@ -63,6 +63,12 @@
     url("../img/nat-4.jpg");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);  margin-top: -35vh;
+}
+
+.section-tours {
+  background-color: #fff;
+  padding-top: 16rem;
+  padding-bottom: 15rem;
   margin-top: -35vh;
 }

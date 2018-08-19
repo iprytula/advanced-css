@@ -166,7 +166,13 @@ body {
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+  margin-top: -35vh; }
+
+.section-tours {
+  background-color: #fff;
+  padding-top: 16rem;
+  padding-bottom: 15rem;
   margin-top: -35vh; }
 
 .primary-btn {
@@ -247,3 +253,33 @@ body {
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-7px); }
+
+.card {
+  perspective: 150rem;
+  height: 20rem; }
+  .card__side {
+    background-color: orangered;
+    color: #fff;
+    height: 20rem;
+    transition: all 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    box-shadow: 0 1rem 2.5rem rgba(119, 119, 119, 0.4); }
+    .card__side_front {
+      background-color: orangered; }
+    .card__side_back {
+      transform: rotateY(180deg); }
+      .card__side_back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side_back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side_back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover .card__side_front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side_back {
+    transform: rotateY(0); }
