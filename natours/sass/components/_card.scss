@@ -1,11 +1,9 @@
 .card {
   perspective: 150rem;
-  height: 20rem;
+  height: 29rem;
 
   &__side {
-    background-color: orangered;
-    color: #fff;
-    height: 20rem;
+    height: 29rem;
     transition: all 1s ease;
     position: absolute;
     top: 0;
@@ -16,7 +14,7 @@
     box-shadow: 0 1rem 2.5rem rgba($color-grey-dark, 0.4);
 
     &_front {
-      background-color: orangered;
+      
     }
 
     &_back {
@@ -37,10 +35,96 @@
   }
 
   &:hover &__side_front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &__side_back {
     transform: rotateY(0);
+  }
+
+  // FRONT SIDE STYLING
+  &__image {
+    background-size: cover;
+    height: 15rem;
+    border-radius: 5px 5px 0 0;
+    background-blend-mode: color;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+
+    &_picture-1 {
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),url('../img/nat-5.jpg');
+    }
+
+    &_picture-2 {
+      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url('../img/nat-6.jpg');
+    }
+
+    &_picture-3 {
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url('../img/nat-7.jpg');
+    }
+  }
+
+  &__heading {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    text-align: right;
+    top: 7rem;
+    right: 1rem;
+    width: 50%;
+    line-height: 1.75;
+  }
+
+  &__heading_span {
+    padding: .3rem .7rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    &-1 {
+      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8));
+    }
+
+    &-2 {
+      background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
+    }
+
+    &-3 {
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .8));
+    }
+  }
+
+  &__list {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto
+  }
+
+  &__item {
+    text-align: center;
+    font-size: 1rem;
+    padding: .5rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  // BACK SIDE STYLING
+
+  .card__cta {
+    margin: 8rem auto 5rem auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__price-box {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  &__price_value {
+    font-size: 3rem;
+    font-weight: 200;
   }
 }

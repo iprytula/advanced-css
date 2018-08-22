@@ -11,7 +11,7 @@
   animation: moveInBottom;
   animation-duration: 1s;
   transition: all 0.2s;
-  position: relative;
+  // position: relative;
   color: $color-grey-dark;
   background-color: #fff;
 
@@ -24,4 +24,14 @@
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
+}
+
+.primary-btn_small {
+  width: 150px;
+  padding: .6rem;
+}
+
+.primary-btn_green {
+  background-color: $color-primary-dark;
+  color: #fff;
 }

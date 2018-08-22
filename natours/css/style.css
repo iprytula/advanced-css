@@ -123,6 +123,9 @@ body {
 .u-mb-1 {
   margin-bottom: 1rem; }
 
+.u-mt-5 {
+  margin-top: 5rem !important; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
@@ -173,7 +176,7 @@ body {
   background-color: #fff;
   padding-top: 16rem;
   padding-bottom: 15rem;
-  margin-top: -35vh; }
+  margin-top: -30vh; }
 
 .primary-btn {
   display: block;
@@ -188,7 +191,6 @@ body {
   animation: moveInBottom;
   animation-duration: 1s;
   transition: all 0.2s;
-  position: relative;
   color: #777;
   background-color: #fff; }
   .primary-btn:hover {
@@ -197,6 +199,14 @@ body {
   .primary-btn:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+.primary-btn_small {
+  width: 150px;
+  padding: .6rem; }
+
+.primary-btn_green {
+  background-color: #28b485;
+  color: #fff; }
 
 .secondary-btn {
   color: #55c57a;
@@ -256,11 +266,9 @@ body {
 
 .card {
   perspective: 150rem;
-  height: 20rem; }
+  height: 29rem; }
   .card__side {
-    background-color: orangered;
-    color: #fff;
-    height: 20rem;
+    height: 29rem;
     transition: all 1s ease;
     position: absolute;
     top: 0;
@@ -269,8 +277,6 @@ body {
     backface-visibility: hidden;
     border-radius: 5px;
     box-shadow: 0 1rem 2.5rem rgba(119, 119, 119, 0.4); }
-    .card__side_front {
-      background-color: orangered; }
     .card__side_back {
       transform: rotateY(180deg); }
       .card__side_back-1 {
@@ -280,6 +286,59 @@ body {
       .card__side_back-3 {
         background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side_front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side_back {
     transform: rotateY(0); }
+  .card__image {
+    background-size: cover;
+    height: 15rem;
+    border-radius: 5px 5px 0 0;
+    background-blend-mode: color;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%); }
+    .card__image_picture-1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
+    .card__image_picture-2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-6.jpg"); }
+    .card__image_picture-3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-7.jpg"); }
+  .card__heading {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    text-align: right;
+    top: 7rem;
+    right: 1rem;
+    width: 50%;
+    line-height: 1.75; }
+  .card__heading_span {
+    padding: .3rem .7rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card__heading_span-1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+    .card__heading_span-2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+    .card__heading_span-3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .card__list {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto; }
+  .card__item {
+    text-align: center;
+    font-size: 1rem;
+    padding: .5rem; }
+    .card__item:not(:last-child) {
+      border-bottom: 1px solid #eee; }
+  .card .card__cta {
+    margin: 8rem auto 5rem auto;
+    text-align: center;
+    text-transform: uppercase; }
+  .card__price-box {
+    font-size: 1.2rem;
+    color: #fff; }
+  .card__price_value {
+    font-size: 3rem;
+    font-weight: 200; }
