@@ -105,3 +105,48 @@
     padding-left: 3rem;
   }
 }
+
+.footer {
+  background-color: #212121;
+  padding: 3rem 0;
+
+  &__logo-box {
+    text-align: center;
+  }
+
+  &__logo {
+    width: 10%;
+  }
+
+  &__list {
+    list-style: none;
+    margin-left: 2rem;
+  }
+
+  &__list-item {
+    float: left;
+    
+  }
+
+  &__link {
+    text-decoration: none;
+    padding: 1rem .7rem;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 600;
+    color: $color-grey-light;
+    display: inline-block;
+    transition: all .3s;
+    
+    &:hover {
+      color: $color-primary-light;
+      transform: rotate(5deg) scale(1.2);
+    }
+
+  }
+
+  &__copyright {
+    margin-top: .7rem;
+    color: $color-grey-dark;
+  }
+}
