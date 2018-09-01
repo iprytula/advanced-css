@@ -1,50 +1,3 @@
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-      to right,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
-    url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
-
-  &__logo-box {
-    padding: 3rem 0 0 3rem;
-  }
-
-  &__logo-box-img {
-    height: 2rem;
-  }
-
-  &__primary-title {
-    margin: 16vh auto 0 auto;
-    text-align: center;
-    color: #fff;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1;
-
-    &_main {
-      display: block;
-      font-size: 2.5rem;
-      letter-spacing: 2rem;
-      animation: moveInLeft;
-      animation-duration: 1s;
-    }
-
-    &_sub {
-      display: inline-block;
-      font-size: 1rem;
-      letter-spacing: 0.82rem;
-      animation: moveInRight;
-      animation-duration: 1s;
-      margin-left: -16px;
-    }
-  }
-}
-
 .section-about {
   background-color: $color-grey-light;
   padding-top: 10rem;
@@ -63,7 +16,8 @@
     url("../img/nat-4.jpg");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);  margin-top: -35vh;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+  margin-top: -35vh;
 }
 
 .section-tours {
@@ -83,70 +37,29 @@
 .section-book {
   padding-top: 5rem;
   padding-bottom: 4rem;
-  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
   width: 100%;
 
-}
-
-.book {
-  background-image: linear-gradient(
-    105deg,
-    rgba(#fff, .9) 0%,
-    rgba(#fff, .9) 50%,
-    transparent 50%),
-    url('../img/nat-10.jpg');
-  border-radius: 3px;
-  background-size: cover;
-  height: 35rem;
-
-  &__form {
-    width: 50%;
-    padding-top: 2rem;
-    padding-left: 3rem;
-  }
-}
-
-.footer {
-  background-color: #212121;
-  padding: 3rem 0;
-
-  &__logo-box {
-    text-align: center;
-  }
-
-  &__logo {
-    width: 10%;
-  }
-
-  &__list {
-    list-style: none;
-    margin-left: 2rem;
-  }
-
-  &__list-item {
-    float: left;
-    
-  }
-
-  &__link {
-    text-decoration: none;
-    padding: 1rem .7rem;
-    text-transform: uppercase;
-    font-size: .9rem;
-    font-weight: 600;
-    color: $color-grey-light;
-    display: inline-block;
-    transition: all .3s;
-    
-    &:hover {
-      color: $color-primary-light;
-      transform: rotate(5deg) scale(1.2);
+  .book {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 50%,
+        transparent 50%
+      ),
+      url("../img/nat-10.jpg");
+    border-radius: 3px;
+    background-size: cover;
+    height: 35rem;
+  
+    &__form {
+      width: 50%;
+      padding-top: 2rem;
+      padding-left: 3rem;
     }
-
-  }
-
-  &__copyright {
-    margin-top: .7rem;
-    color: $color-grey-dark;
   }
 }

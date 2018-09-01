@@ -60,6 +60,175 @@ body {
   .row .col-2-of-3:not(:last-child) {
     margin-right: 3rem; }
 
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%); }
+  .header__logo-box {
+    padding: 3rem 0 0 3rem; }
+  .header__logo-box-img {
+    height: 2rem; }
+  .header__primary-title {
+    margin: 16vh auto 0 auto;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1; }
+    .header__primary-title_main {
+      display: block;
+      font-size: 2.5rem;
+      letter-spacing: 2rem;
+      animation: moveInLeft;
+      animation-duration: 1s; }
+    .header__primary-title_sub {
+      display: inline-block;
+      font-size: 1rem;
+      letter-spacing: 0.82rem;
+      animation: moveInRight;
+      animation-duration: 1s;
+      margin-left: -16px; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  display: block; }
+
+.navigation__btn {
+  color: #f7f7f7;
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7;
+  cursor: pointer; }
+
+.navigation__background {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  z-index: 1000;
+  transition: all .5s; }
+
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  display: none;
+  transition: .5s; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center; }
+
+.navigation__item {
+  margin: .4rem 0; }
+
+.navigation__link {
+  font-size: 1.7rem;
+  color: #f7f7f7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: inline-block;
+  padding: .2rem 1rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #f7f7f7 50%);
+  background-size: 220%;
+  transition: all .5s; }
+  .navigation__link:hover, .navigation__link:active {
+    background-position: 100%;
+    color: #777;
+    transform: translateX(0.5rem); }
+
+.navigation__number {
+  display: inline-block;
+  margin-right: .5rem; }
+
+.navigation__icon {
+  position: relative;
+  top: 2rem;
+  left: 1rem; }
+  .navigation__icon, .navigation__icon:before, .navigation__icon:after {
+    width: 2rem;
+    height: 2px;
+    background-color: #777;
+    display: inline-block; }
+  .navigation__icon:before, .navigation__icon:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .1s; }
+  .navigation__icon:before {
+    top: -.5rem; }
+  .navigation__icon:after {
+    top: .5rem; }
+
+.navigation__btn:hover .navigation__icon:before {
+  top: -.6rem; }
+
+.navigation__btn:hover .navigation__icon:after {
+  top: .6rem; }
+
+.navigation__checkbox:checked + .navigation__btn .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__btn .navigation__icon:before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__btn .navigation__icon:after {
+  top: 0;
+  transform: rotate(-135deg); }
+
+.footer {
+  background-color: #212121;
+  padding: 3rem 0; }
+  .footer__logo-box {
+    text-align: center; }
+  .footer__logo {
+    width: 10%; }
+  .footer__list {
+    list-style: none;
+    margin-left: 2rem; }
+  .footer__list-item {
+    float: left; }
+  .footer__link {
+    text-decoration: none;
+    padding: 1rem .7rem;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #f7f7f7;
+    display: inline-block;
+    transition: all .3s; }
+    .footer__link:hover {
+      color: #7ed56f;
+      transform: rotate(5deg) scale(1.2); }
+  .footer__copyright {
+    margin-top: .7rem;
+    color: #777; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -138,37 +307,6 @@ body {
 .u-fl {
   float: left !important; }
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%); }
-  .header__logo-box {
-    padding: 3rem 0 0 3rem; }
-  .header__logo-box-img {
-    height: 2rem; }
-  .header__primary-title {
-    margin: 16vh auto 0 auto;
-    text-align: center;
-    color: #fff;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1; }
-    .header__primary-title_main {
-      display: block;
-      font-size: 2.5rem;
-      letter-spacing: 2rem;
-      animation: moveInLeft;
-      animation-duration: 1s; }
-    .header__primary-title_sub {
-      display: inline-block;
-      font-size: 1rem;
-      letter-spacing: 0.82rem;
-      animation: moveInRight;
-      animation-duration: 1s;
-      margin-left: -16px; }
-
 .section-about {
   background-color: #f7f7f7;
   padding-top: 10rem;
@@ -201,44 +339,15 @@ body {
   padding-bottom: 4rem;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
   width: 100%; }
-
-.book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
-  border-radius: 3px;
-  background-size: cover;
-  height: 35rem; }
-  .book__form {
-    width: 50%;
-    padding-top: 2rem;
-    padding-left: 3rem; }
-
-.footer {
-  background-color: #212121;
-  padding: 3rem 0; }
-  .footer__logo-box {
-    text-align: center; }
-  .footer__logo {
-    width: 10%; }
-  .footer__list {
-    list-style: none;
-    margin-left: 2rem; }
-  .footer__list-item {
-    float: left; }
-  .footer__link {
-    text-decoration: none;
-    padding: 1rem .7rem;
-    text-transform: uppercase;
-    font-size: .9rem;
-    font-weight: 600;
-    color: #f7f7f7;
-    display: inline-block;
-    transition: all .3s; }
-    .footer__link:hover {
-      color: #7ed56f;
-      transform: rotate(5deg) scale(1.2); }
-  .footer__copyright {
-    margin-top: .7rem;
-    color: #777; }
+  .section-book .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
+    border-radius: 3px;
+    background-size: cover;
+    height: 35rem; }
+    .section-book .book__form {
+      width: 50%;
+      padding-top: 2rem;
+      padding-left: 3rem; }
 
 .primary-btn {
   display: block;
