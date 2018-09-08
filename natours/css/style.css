@@ -12,6 +12,20 @@ body {
   padding: 1rem;
   box-sizing: border-box; }
 
+/*
+0 - 600px: Phone
+600px - 900px: Tablet
+900px - 1200px: Tablet landscape
+1200px - 1800px: Is where oir normal styles apply
+1800px + : Big desctop
+*/
+/*
+$breakpoint argument choises:
+- phone
+- tab-port
+- tab-land
+- big-desctop
+*/
 .container {
   max-width: 71.25rem;
   margin: 0 auto; }
@@ -229,6 +243,31 @@ body {
     margin-top: .7rem;
     color: #777; }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 1rem; }
+  @media (max-width: 37.5rem) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 56.25rem) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 75rem) {
+    html {
+      font-size: 70%; } }
+  @media (min-width: 112.5rem) {
+    html {
+      font-size: 120%; } }
+
+body {
+  box-sizing: border-box; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -324,7 +363,7 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding-top: 10rem;
+  padding-top: 13rem;
   padding-bottom: 4rem;
   margin-top: -25vh; }
 
