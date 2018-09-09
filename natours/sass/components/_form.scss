@@ -48,6 +48,10 @@
   &__radio-group {
     width: 45%;
     display: inline-block;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__radio-input {

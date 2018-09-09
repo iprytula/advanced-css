@@ -1,6 +1,10 @@
 .composition {
   position: relative;
 
+  @include respond(teb-port) {
+    margin-top: 3rem;
+  }
+
   &__photo {
     width: 55%;
     box-shadow: 0 1rem 2.5rem rgba($color-grey-dark, .4);
@@ -30,6 +34,10 @@
   &__photo_p3 {
     left: 20%;
     top: 7rem;
+
+    @include respond(tab-port) {
+      top: 4rem;
+    }
   }
 
   &:hover &__photo:not(:hover) {

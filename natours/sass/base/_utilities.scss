@@ -18,6 +18,10 @@
 
 .u-mb-4 {
   margin-bottom: 4rem;
+
+  @include respond(phone) {
+    margin-bottom: 2rem;
+  }
 }
 
 .u-mt-3 {
