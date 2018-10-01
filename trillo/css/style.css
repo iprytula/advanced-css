@@ -37,6 +37,9 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   min-height: 100%; }
+  @media screen and (max-width: 65.74em) {
+    html {
+      font-size: 45%; } }
 
 *,
 *::before,
@@ -57,6 +60,11 @@ body {
   background-color: var(--color-light-2);
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
+  @media screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   font-size: 1.4rem;
@@ -66,9 +74,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      height: 11rem;
+      align-content: space-around; } }
 
 .content {
   display: flex; }
+  @media screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-dark-1);
@@ -77,6 +93,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media screen and (max-width: 56.25em) {
+    .sidebar {
+      min-height: 0; } }
 
 .hotel-view {
   flex: 1;
@@ -90,6 +109,12 @@ body {
   font-size: 1.4rem;
   background-color: var(--color-light-1);
   border-bottom: var(--line); }
+  @media screen and (max-width: 56.25em) {
+    .detail {
+      padding: 2rem; } }
+  @media screen and (max-width: 41.25em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   font-size: 1.4rem;
@@ -97,6 +122,13 @@ body {
   flex: 0 0 60%;
   margin-right: 4rem;
   padding: 2rem; }
+  @media screen and (max-width: 56.25em) {
+    .description {
+      margin-right: 2rem; } }
+  @media screen and (max-width: 41.25em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   flex: 1;
@@ -143,6 +175,11 @@ body {
     height: 2rem;
     width: 2rem;
     fill: var(--color-dark-3); }
+  @media screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-light-2); } }
 
 .user-nav {
   align-self: stretch;
@@ -192,6 +229,12 @@ body {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
+      @media screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
+    @media screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
   .side-nav__item:before {
     content: "";
     position: absolute;
@@ -218,17 +261,37 @@ body {
     z-index: 2;
     display: flex;
     align-items: center; }
+    @media screen and (max-width: 56.25em) {
+      .side-nav__link, .side-nav__link:visited {
+        justify-content: center;
+        padding: 2rem; } }
+    @media screen and (max-width: 41.25em) {
+      .side-nav__link, .side-nav__link:visited {
+        flex-direction: column; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media screen and (max-width: 41.25em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: .7rem;
+        width: 1.5rem;
+        height: 1.5rem; } }
+  @media screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
 
 .legal {
   text-align: center;
   font-size: 1.2rem;
   padding: 2.5rem;
   color: var(--color-light-4); }
+  @media screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -246,6 +309,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media screen and (max-width: 41.25em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -269,6 +336,9 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column; }
+    @media screen and (max-width: 41.25em) {
+      .overview__rating {
+        padding: 0; } }
   .overview__rating-avarage {
     font-size: 2.25rem;
     font-weight: 300;
@@ -343,6 +413,8 @@ body {
   .recommend__count {
     margin-right: auto;
     font-size: 1.4rem; }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -350,7 +422,7 @@ body {
     border-radius: 50%;
     border: 3px solid #fff; }
     .recommend__photo:not(:last-child) {
-      margin-right: -1.5rem; }
+      margin-right: -2rem; }
 
 .review {
   background-color: #fff;
