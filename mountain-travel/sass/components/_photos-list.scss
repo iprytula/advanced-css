@@ -1,0 +1,36 @@
+.photos-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+
+  &__item {
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+
+    &_small {
+      flex: 0 0 35%;
+    }
+
+    &_big {
+      flex: 0 0 65%;
+    }
+
+    &_1 {
+      background-image: url(../img/mountain1.jpg);
+    }
+    &_2 {
+      background-image: url(../img/mountain2.jpg);
+    }
+    &_3 {
+      background-image: url(../img/mountain3.jpg);
+    }
+    &_4 {
+      background-image: url(../img/mountain4.jpg);
+    }
+  }
+}

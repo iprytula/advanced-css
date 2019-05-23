@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 /*
 0 - 600px: Phone
 600px - 900px: Tablet
@@ -27,6 +29,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .u-mb-1 {
   margin-bottom: 1rem !important; }
+
+.u-mb-2 {
+  margin-bottom: 2rem !important; }
 
 .u-mb-3 {
   margin-bottom: 3rem !important; }
@@ -58,6 +63,34 @@ ORDER: Base + typography > general layout + grid > page layout > components
   background-color: #f2f2f2;
   color: #636363; }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.heading-tertiary {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline-block;
+  color: #545454;
+  letter-spacing: .1rem;
+  font-family: "Open Sans", sans-serif; }
+
+.heading-secondary {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  color: #545454;
+  letter-spacing: .1rem;
+  font-family: "Quicksand", sans-serif; }
+
+.paragraph {
+  font-size: 1rem;
+  color: #545454; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 1rem; }
+
 *,
 *::after,
 *::before {
@@ -82,7 +115,8 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  background-color: #ededed; }
 
 .container {
   width: 100%;
@@ -110,7 +144,7 @@ body {
 .hero {
   background-image: url(../img/main.jpg);
   background-size: cover;
-  min-height: 100.1vh;
+  min-height: 100.3vh;
   margin-top: -4.1rem;
   display: flex;
   justify-content: space-around;
@@ -126,12 +160,36 @@ body {
       font-size: 1.5rem;
       font-weight: 400; }
 
+.destinations {
+  padding-bottom: 5rem; }
+  .destinations-description {
+    width: 70%;
+    margin: 0 auto; }
+
+.trips-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .trips-list__item {
+    flex-basis: 40%;
+    padding: 1rem 0; }
+    .trips-list__item i {
+      display: block;
+      color: #3D68AC;
+      margin-bottom: .5rem; }
+
+.trips-description {
+  width: 70%;
+  margin: 0 auto; }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  color: #f2f2f2; }
+  color: #f2f2f2;
+  font-family: "Quicksand", sans-serif; }
   .header-navigation__list {
     display: flex;
     list-style: none;
@@ -139,6 +197,37 @@ body {
   .header-navigation__list-item {
     padding: 0 1rem; }
   .header-navigation__link {
+    display: inline-block;
     color: #f2f2f2;
+    font-weight: 600;
     text-transform: uppercase;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: all .3s; }
+    .header-navigation__link:hover {
+      color: #081D4A;
+      transform: scale(1.2) rotate(4deg); }
+
+.photos-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between; }
+  .photos-list__item {
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover; }
+    .photos-list__item_small {
+      flex: 0 0 35%; }
+    .photos-list__item_big {
+      flex: 0 0 65%; }
+    .photos-list__item_1 {
+      background-image: url(../img/mountain1.jpg); }
+    .photos-list__item_2 {
+      background-image: url(../img/mountain2.jpg); }
+    .photos-list__item_3 {
+      background-image: url(../img/mountain3.jpg); }
+    .photos-list__item_4 {
+      background-image: url(../img/mountain4.jpg); }
