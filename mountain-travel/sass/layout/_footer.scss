@@ -1,0 +1,29 @@
+.footer {
+  background-color: #378a99;
+  color: $white;
+  padding: 2rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      height: 250px;
+      text-align: center;
+    }
+  }
+
+  .socials {
+    display: flex;
+    
+    font-size: 2rem;
+
+    a {
+      color: $white;
+      margin: .5rem;
+    }
+  }
+}

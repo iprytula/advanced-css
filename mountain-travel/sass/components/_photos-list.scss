@@ -14,10 +14,26 @@
 
     &_small {
       flex: 0 0 35%;
+
+      @include respond(tab-land) {
+        flex: 0 0 50%
+      }
+
+      @include respond(tab-port) {
+        flex: 0 0 100%
+      }
     }
 
     &_big {
       flex: 0 0 65%;
+
+      @include respond(tab-land) {
+        flex: 0 0 50%
+      }
+
+      @include respond(tab-port) {
+        flex: 0 0 100%
+      }
     }
 
     &_1 {

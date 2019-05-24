@@ -64,6 +64,15 @@ body {
   }
 }
 
+.description {
+  width: 70%;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}
+
 .hero {
   background-image: url(../img/main.jpg);
   background-size: cover;
@@ -80,26 +89,38 @@ body {
     h1 {
       color: $white;
       font-size: 3rem;
+
+      @include respond(tab-port) {
+        font-size: 1.5rem;
+      }
     }
 
     h3 {
       color: $white;
       font-size: 1.5rem;
       font-weight: 400;
+
+      @include respond(tab-port) {
+        font-size: 1.2rem;
+      }
     }
   }
 }
 
 .destinations {
-  padding-bottom: 5rem;;
+  padding-bottom: 5rem;
 
-  &-description {
-    width: 70%;
-    margin: 0 auto;
+  @include respond(tab-port) {
+    .heading-secondary {
+      font-size: 1.5rem;
+    }
   }
 }
 
 .trips {
+  padding: 2rem;
+  padding-top: 0;
+
   &-list {
     list-style: none;
     display: flex;
@@ -110,6 +131,10 @@ body {
       flex-basis: 40%;
       padding: 1rem 0;
 
+      @include respond(tab-port) {
+        flex-basis: 100%;
+      }
+
       i {
         display: block;
         color: #3D68AC;
@@ -117,9 +142,28 @@ body {
       }
     }
   }
+}
 
-  &-description {
-    width: 70%;
-    margin: 0 auto;
+.learn-more {
+  background-color: $white;
+  padding: 4rem;
+
+  .newsletter {
+    &__input {
+      padding: .9rem;
+      width: 50%;
+      border: 1px solid $light-blue;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+
+    @include respond(phone) {
+      button {
+        margin-top: 2rem;
+        width: 60%;
+      }
+    }
   }
 }

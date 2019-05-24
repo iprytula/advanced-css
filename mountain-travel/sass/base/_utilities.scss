@@ -26,32 +26,47 @@
   float: left !important;
 }
 
+.u-ml-1 {
+  margin-left: 1rem !important;
+}
+
 .u-btn {
   text-decoration: none;
   padding: 1rem 2rem;
-  border-radius: 50px;
-  position: relative;
+  border-radius: 5px;
   top: 0px;
-  box-shadow: 0px 4px;
+  border: 0;
+  cursor: pointer;
+  transition: all .3s;
 
   &:hover {
-    box-shadow: 0px 2px;
-    top: 2px; 
-  }
-
-  &:active {
-    box-shadow: 0px 0px;
-    top: 4px; 
+    background-color: $dark-blue;
   }
 }
 
 .u-btn-white {
-  background-color: #f2f2f2;
-  color: #636363;
+  background-color: $white;
+  color: $grey;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.u-btn-blue {
+  background-color: $light-blue;
+  color: $white;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%
+}
+
+.u-breakline {
+  width: 30%;
+  height: 3px;
+  background-color: $light-blue;
+  margin: 0 auto;
 }
